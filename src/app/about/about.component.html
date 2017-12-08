@@ -1,0 +1,31 @@
+<p></p>
+
+<div class="container .spacer">
+    <div class="panel panel-primary">
+        <div class="panel-heading">About Component</div>
+        <div class="panel-body">
+
+
+            <ul>
+                <li>E-mail :<strong>{{Info.mail}}</strong></li>
+                <li>Name :<strong>{{Info.name}}</strong></li>
+
+            </ul>
+
+
+            <div>
+                <label>Serach</label>
+                <input type="text" [(ngModel)]="comment.message" />
+                <button (click)="addCommet()" class="panel panel-primary"> Add Commentar</button>
+            </div>
+
+
+
+            <h3>List of Commantar</h3>
+            <ul>
+                <li *ngFor="let c of comments">
+                    {{c.message}} {{c.date}}</li>
+            </ul>
+
+        </div>
+    </div>
