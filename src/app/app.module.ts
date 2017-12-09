@@ -12,12 +12,15 @@ import { Http } from '@angular/http/src/http';
 import { ContactsService } from 'services/contacts.Services';
 import { NewContactsComponent } from './new-contacts/new-contacts.component';
 import { Contact } from 'model/contact.model';
+import { NouveauContactsComponent } from './nouveau-contacts/nouveau-contacts.component';
 
 const appRoutes :Routes=[
 
   {path:'about',component:AboutComponent},
   {path:'contacts',component:ContactsComponent},
-  {path : 'newContacts',component:NewContactsComponent},
+  {path : 'newcontacts',component:NewContactsComponent},
+  {path : 'nouveaucontacts',component:NouveauContactsComponent},
+  
   {path :'',redirectTo:'/about',pathMatch:'full'}
   
 
@@ -28,7 +31,8 @@ const appRoutes :Routes=[
     AppComponent,
     ContactsComponent,
     AboutComponent,
-    NewContactsComponent
+    NewContactsComponent,
+    NouveauContactsComponent
   ],
   imports: [
     BrowserModule,

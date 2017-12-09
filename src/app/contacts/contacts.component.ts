@@ -21,8 +21,6 @@ export class ContactsComponent implements OnInit {
   pages :Array<number>;
   constructor(public http:Http , public contactsService :ContactsService) { }
 
-
-
   ngOnInit() {
   
   }

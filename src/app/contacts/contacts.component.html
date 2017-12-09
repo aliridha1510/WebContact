@@ -7,7 +7,7 @@
 
             <div>
                 <button class="btn btn-primary" (click)="recherche()"> Search to Contact</button>
-                <input type="text" [(ngModel)]="motcle" />
+                <input type="text" [(ngModel)]=motcle />
             </div>
 
             <table class="table">
@@ -30,6 +30,8 @@
 
                     <td>{{c.email}}</td>
                     <td>{{c.photo}}</td>
+                    <td><a>Delete</a></td>
+                    <td><a>Edit</a></td>
 
                 </tr>
 
