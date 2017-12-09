@@ -24,7 +24,7 @@
             <h3>List of Commantar</h3>
             <ul>
                 <li *ngFor="let c of comments">
-                    {{c.message}} {{c.date}}</li>
+                    {{c.message}} {{c.date|date:'HH:mm:ss'}}</li>
             </ul>
 
         </div>

@@ -1,0 +1,71 @@
+<p></p>
+<div class="container .spacer">
+    <div class="panel panel-primary" *ngIf="mode=='new'">
+        <div class="panel panel-heading">Add New Contact</div>
+        <div class="panel panel-body">
+
+
+            <div class="input-group input-group-sm">
+                <label class="form-control">fristname</label>
+                <input type="text" class="form-control" [(ngModel)]=fristname>
+            </div>
+            <br>
+            <div class="input-group input-group-sm">
+                <label class="form-control">Lastname</label>
+                <input type="text" class="form-control" [(ngModel)]=lastname>
+            </div>
+            <br>
+            <div class="input-group input-group-sm">
+                <label class="form-control">E-mail</label>
+                <input type="email" class="form-control" placeholder="email" aria-label="email" [(ngModel)]=email>
+            </div>
+            <br>
+            <div class="input-group input-group-sm">
+                <label class="form-control">Photo</label>
+                <input type="email" class="form-control" placeholder="photo" aria-label="photo" [(ngModel)]=photo>
+            </div>
+            <br>
+            <button (click)="saveContact()" class="btn btn-primary">Add</button>
+            <button (click)="newContact()" class="btn btn-primary">New</button>
+
+        </div>
+
+    </div>
+</div>
+<div class="container .spacer">
+
+    <div class="panel panel-primary" *ngIf="mode=='confirm'">
+        <div class="panel panel-heading">Confirmation</div>
+        <div class="panel panel-body">
+
+
+            <div class="input-group input-group-sm">
+                <label class="form-control">ID</label>
+                <label class="form-control">{{id}}</label>
+
+            </div>
+            <br>
+            <div class="input-group input-group-sm">
+                <label class="form-control">Lastname</label>
+                <label class="form-control">{{lastname}}</label>
+
+            </div>
+            <br>
+            <div class="input-group input-group-sm">
+                <label class="form-control">E-mail</label>
+                <label class="form-control">{{email}}</label>
+
+            </div>
+            <br>
+            <div class="input-group input-group-sm">
+                <label class="form-control">Photo</label>
+                <label class="form-control">{{photo}}</label>
+
+            </div>
+            <br>
+            <button (click)="newContact()" class="btn btn-primary">New</button>
+
+        </div>
+
+    </div>
+</div>

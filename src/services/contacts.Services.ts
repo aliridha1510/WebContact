@@ -3,6 +3,8 @@ import { Http } from "@angular/http/src/http";
 
 
 
+import "rxjs/add/operator/map";
+import { Contact } from "model/contact.model";
 
 
 
@@ -14,11 +16,15 @@ export class ContactsService {
     }
 
 
-    getAllContacts(){
-
-        return this.http.get("http://localhost:8080/serachcontacts")
+    getAllContacts(motcle:String,page:number,size:number){
+        return this.http.get("http://localhost:8080/serachcontacts?/mc="+motcle+"&page="+page+"&size="+size)
         .map(resp => resp.json())
     }
 
+    doSave(lastname:String ,firstname:String,email:String,photo:String,contact:Contact){
+         return this.http.post("http://localhost:8080/saveContacts?lastname="+lastname+"&firstname="+firstname+"&email="+email+"&photo="+photo+"",contact)
+            .map(resp => resp.json())
+            
+          }
 
 }

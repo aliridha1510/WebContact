@@ -13,17 +13,41 @@ import { ContactsService } from 'services/contacts.Services';
 
 export class ContactsComponent implements OnInit {
  
+ currentpage :number=0;
   pagecontacts: any
-  
-  
+  motcle:String="";
+  page:number =0;
+  size:number=4;
+  pages :Array<number>;
   constructor(public http:Http , public contactsService :ContactsService) { }
 
 
 
   ngOnInit() {
-    this.contactsService.getAllContacts().subscribe(data =>{ this.pagecontacts =data;},err =>{
-      console.log(err)
-    })
+  
   }
 
+  doSearch(){
+
+    this.contactsService.getAllContacts(this.motcle,this.currentpage,this.size)
+    .subscribe(data =>{ 
+      this.pagecontacts =data;
+      this.pages = new Array(data.totalPages)
+    },err =>{
+      console.log(err)
+    })
+    
+  }
+
+  recherche(){
+    this.doSearch();
+    console.log(this.motcle)
+  }
+
+
+  gotoPage(i:number){
+    this.currentpage=i;
+    this.doSearch();
+    console.log(i);
+  }
 }

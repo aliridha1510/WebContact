@@ -6,8 +6,8 @@
 
 
             <div>
-                <button class="btn btn-primary"> Search to Contact</button>
-                <input type="text" />
+                <button class="btn btn-primary" (click)="recherche()"> Search to Contact</button>
+                <input type="text" [(ngModel)]="motcle" />
             </div>
 
             <table class="table">
@@ -35,8 +35,15 @@
 
             </table>
 
+            <!-- [ngClass]="{ 'active': i==currentpage}" -->
+            <div class="container">
+                <ul class="nav nav-pills">
+                    <li [ngClass]="{ 'active': i==currentpage}" *ngFor="let p of pages ; let i=index ">
+                        <a class="clickable" (click)=gotoPage(i)>{{i}}</a>
 
-
+                    </li>
+                </ul>
+            </div>
 
         </div>
     </div>

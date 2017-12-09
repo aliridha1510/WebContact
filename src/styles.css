@@ -3,3 +3,7 @@
 .spacer {
     margin-top: 30px
 }
+
+.clickable {
+    cursor: pointer
+}
