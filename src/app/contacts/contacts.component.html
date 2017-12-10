@@ -30,8 +30,10 @@
 
                     <td>{{c.email}}</td>
                     <td>{{c.photo}}</td>
-                    <td><a>Delete</a></td>
-                    <td><a>Edit</a></td>
+                    <td><a (click)="onDelete(c)">Delete</a></td>
+                    <td><a (click)="onEditContact(c.id)">Edit</a></td>
+                    <td> <a routerLink="/editContact/id" routerLinkActive="active">Heroes</a>
+                    </td>
 
                 </tr>
 

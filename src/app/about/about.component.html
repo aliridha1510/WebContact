@@ -22,9 +22,11 @@
 
 
             <h3>List of Commantar</h3>
-            <ul>
+            <ul class="list-group">
                 <li *ngFor="let c of comments">
-                    {{c.message}} {{c.date|date:'HH:mm:ss'}}</li>
+                    {{c.message}}
+
+                    <span class="control-span">{{c.date|date:'M/d/yy, h:mm a'}}</span></li>
             </ul>
 
         </div>

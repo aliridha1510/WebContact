@@ -1,3 +1,5 @@
+<br>
+
 <div class="container .spacer">
     <div class="panel panel-primary">
         <div class="panel panel-heading">Ajoute Nouveau Contact</div>
@@ -7,6 +9,9 @@
                     <div>
                         <label>Name</label>
                         <input class="form-control" [(ngModel)]="lastname" name="lastname" required>
+
+                        <!-- <div *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)" class="alert alert-danger">
+                        </div> -->
                     </div>
 
                     <div class="input-group input-group-sm">
@@ -21,9 +26,13 @@
 
                     <div class="input-group input-group-sm">
                         <label>photo</label>
+
+
                         <input class="form-control" [(ngModel)]="photo" name="photo" required>
                     </div>
-
+                    <div> <span class="input-group-btn">
+    <button class="browse btn btn-primary input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button>
+  </span></div>
                     <br>
                     <button [disabled]='!f.valid' class="btn btn-primary" type="submit">Enrgister Nouveau Contacte</button>
                 </form>

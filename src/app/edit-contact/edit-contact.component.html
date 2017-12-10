@@ -1,0 +1,76 @@
+<p></p>
+<div class="container .spacer">
+    <div class="panel panel-primary" *ngIf="mode=='new'">
+        <div class="panel panel-heading">Add New Contact</div>
+        <div class="panel panel-body">
+
+
+            <div class="input-group input-group-sm">
+                <label><strong>Firstname :</strong> </label>
+                <input type="text" class="form-control" [(ngModel)]=fristname>
+            </div>
+            <br>
+            <div class="input-group input-group-sm">
+                <label> <strong>Lastname :</strong> </label>
+                <input type="text" class="form-control" [(ngModel)]=lastname>
+            </div>
+            <br>
+            <div class="input-group input-group-sm">
+                <label> <strong>E-mail :</strong> </label>
+                <input type="email" class="form-control" placeholder="email" aria-label="email" [(ngModel)]=email>
+            </div>
+            <br>
+            <div class="input-group input-group-sm">
+                <label> <strong>Date :</strong> </label>
+                <input type="date" class="form-control" placeholder="date" aria-label="date" [(ngModel)]=age>
+            </div>
+            <br>
+            <div class="input-group input-group-sm">
+                <label class="form-control">Photo</label>
+                <input type="email" class="form-control" placeholder="photo" aria-label="photo" [(ngModel)]=photo>
+            </div>
+            <br>
+            <button (click)="updateContact()" class="btn btn-primary">Update</button>
+            <!-- <button (click)="newContact()" class="btn btn-primary">New</button> -->
+
+        </div>
+
+    </div>
+</div>
+<div class="container .spacer">
+
+    <div class="panel panel-primary" *ngIf="mode=='confirm'">
+        <div class="panel panel-heading">Confirmation</div>
+        <div class="panel panel-body">
+
+
+            <div class="input-group input-group-sm">
+                <label class="form-control">ID</label>
+                <label class="form-control">{{id}}</label>
+
+            </div>
+            <br>
+            <div class="input-group input-group-sm">
+                <label>Lastname</label>
+                <label>{{lastname}}</label>
+
+            </div>
+            <br>
+            <div class="input-group input-group-sm">
+                <label>E-mail</label>
+                <p> {{email}}</p>
+
+            </div>
+            <br>
+            <div class="input-group input-group-sm">
+                <label>Photo</label>
+                <div> <strong>{{photo}}</strong></div>
+
+            </div>
+            <br>
+            <button (click)="newContact()" class="btn btn-primary">New</button>
+
+        </div>
+
+    </div>
+</div>
