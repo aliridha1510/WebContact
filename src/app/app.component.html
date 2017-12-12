@@ -1,14 +1,19 @@
-<div class="container spacer">
-    <!-- <button type="button" class="btn btn-primary">Search</button> -->
-    <button routerLink="/contacts" class="btn btn-secondary">Contacts</button>
-    <button routerLink="/newContacts" class="btn btn-info">Add New Contact</button>
-    <button routerLink="/nouveaucontacts" class="btn btn-info">Ajoute Nouveau Contact</button>
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <!-- Navbar content -->
 
-    <button routerLink="/about" class="btn btn-info">About</button>
+    <div class="container spacer">
+        <input type="text" />
+        <button routerLink="/contacts" tyle="background-color: #e3f2fd;" class="btn btn-info">Contacts</button>
+        <button routerLink="/newContacts" class="btn btn-info">Add New Contact</button>
+        <button routerLink="/nouveaucontacts" class="btn btn-info">Ajoute Nouveau Contact</button>
+        <button routerLink="/about" class="btn btn-info">About</button>
 
-</div>
+    </div>
 
+</nav>
 
 
 <router-outlet></router-outlet>
 <!-- Routed views go here -->
+
+<!-- <app-edit-contact></app-edit-contact> -->

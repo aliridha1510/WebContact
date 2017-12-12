@@ -11,6 +11,7 @@ export class AboutComponent implements OnInit {
 
   Info ={name :"ali ridha haouari",mail:"aliridha.haouari@gmail.com"};
 
+  // arrylist of comments 
   comments =[];
   comment ={date:null,message:''}
   constructor() { }
